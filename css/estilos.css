@@ -55,6 +55,10 @@ body{
     .header .logo-h1 a{
       color: #022037;
     }
+
+    .header .logo-h1 a span{
+        animation: blinker 1s linear infinite;
+    }
     .header .logo-h1 a:hover{
         color:#FFE0AA;
     }
@@ -126,6 +130,9 @@ body{
 }
 .side{
     grid-area: ss;
+    
+}
+.side .side-contenedor{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-gap: 20px;
@@ -176,18 +183,30 @@ body{
     box-sizing : border-box;
     max-width: 75%;
     align-items : center;  
-    background : #fff;
+    background : #FFE0AA;
     color : #022037;
     border : 1px solid #333;
     margin : 0px auto;
     padding : 10px;
     border-radius : 25px;
 }
+#btn-publicar-post{
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 0;
+    border-radius: 90px;
+    background: #00561D;
+    color: #FFE0AA;
+    justify-self: right;
+}
+#btn-publicar-post:hover{
+    background: #297C45;
+}
 .article-post {
     box-sizing : border-box;
     max-width: 50%;
     align-items : center;  
-    background : #fff;
+    background : #FFE0AA;
     color : #022037;
     border : 1px solid #333;
     margin : 0px auto;
@@ -217,22 +236,16 @@ body{
 
 
      .ck-editor__editable {
-      min-height: 400px;
+      min-height: 400px;   
+      max-height: 700px;
+      z-index: 70;
     }
 
+    @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
 
-    .ck .ck-toolbar {
-       
-        z-index: 70;
-      
-    }
-
-    .ck .ck-sticky-panel__content{
-        z-index: 70;
-        
-    }
-    
-    .ck .ck-sticky-panel__content-sticky{
-        z-index: 70;
-        
-    }
+   
+  
