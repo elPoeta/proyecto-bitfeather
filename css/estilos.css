@@ -37,8 +37,8 @@ body{
 }
     .header #logo{
         justify-self: right;
-        width: 40px;
-        height: 60px;
+        align-self: center;
+        max-width: 30%;
     }
     .header .logo-h1{
         grid-column: 2 /4;
@@ -62,10 +62,7 @@ body{
     .header .logo-h1 a:hover{
         color:#FFE0AA;
     }
-    .header .logo-h1 a:hover{
-        color:#FFE0AA;
-    }
-  
+
     .header .nav-bar{
         grid-column: 4 / 7;
     }
@@ -80,7 +77,6 @@ body{
     }
     .header .nav-bar a{
         font-size: 1.3rem;
-        
         font-weight: 700;
         color: #022037;
     }
@@ -99,15 +95,14 @@ body{
         background: #FF9200;
         color: #022037;
         height: 35px;
-        width: 70%;
+        max-width: 70%;
         font-size: 2rem;
         border-bottom:2px solid #022037;
         
        
     }
     .header .header-icon{
-        width: 30px;
-        height: 30px;
+        max-width: 10%;
         
     }
     .header .user{
@@ -115,8 +110,7 @@ body{
         justify-items: left;
     }
     .header .user .header-icon{
-       width: 35px;
-       margin-top: 10px;
+      max-width: 7%;
     }
     .header .user #usuario{
         text-align: center;
@@ -160,7 +154,9 @@ body{
         transform: scale(0.95);
         transition:transform 0.5s;
     }
-
+    .side .side-menu-item .side-icon{
+        max-width: 100%;;
+    }
     .side .side-menu-item:hover {
         transform: scale(1.1);
       
