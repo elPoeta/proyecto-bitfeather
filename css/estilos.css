@@ -90,7 +90,7 @@ body{
         background: #FF9200;
         color: #022037;
         height: 35px;
-        max-width: 70%;
+        max-width: 60%;
         font-size: 2rem;
         border-bottom:2px solid #022037;
         
@@ -101,15 +101,15 @@ body{
         
     }
     .header .user{
-        grid-column: 11 / -1;
+        grid-column: 12 / -1;
         justify-items: left;
     }
     .header .user .header-icon{
-      max-width: 8%;
+      max-width: 10%;
     }
     .header .user #usuario{
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         color: #022037;
     }
 
@@ -234,7 +234,7 @@ body{
       z-index: 70;
     }
 
-@media screen and (max-width: 1114px){
+@media screen and (max-width: 1150px){
     .header .logo-h1{
         grid-column: 1 / 1;
     }
@@ -257,20 +257,21 @@ body{
     }
     .header .buscar{
         grid-column: 8 / 11;
-        padding: 5px;
+       
      }
     .header .buscar #buscador{
-        min-width: 70%;
-        font-size: 1.5rem;
+        min-width: 40%;
+        font-size: 1.3rem;
     }
-    .header .header-icon{
+    .header .buscar .header-icon{
+        min-width: 11%;   
+    }
+    .header .user .header-icon{
         min-width: 12%;   
     }
- 
     .header .user #usuario{
-        text-align: center;
-        font-size: 1.8rem;
-        color: #022037;
+        font-size: 1rem;
+     
     }
 
         .side-menu-crear, 
@@ -282,7 +283,7 @@ body{
     
 }
 
-@media screen and (max-width: 890px){
+@media screen and (max-width: 900px){
     .grid{
         height: 100vh;
         display: grid;
@@ -304,29 +305,20 @@ body{
         display: none;
     }
     .header .buscar{
-        grid-column: 3 / 8;
-        padding: 5px;
+        grid-column: 3 / 9;
+
      }
      .header .buscar #buscador{
-        min-width: 80%;
+        max-width: 70%; 
         font-size: 1.2rem;
     }
-    .header .header-icon{
-        max-width: 15%;   
+    .header .buscar .header-icon{
+        max-width: 9%;   
     }
     .header .user{
-        grid-column: 9 / -1;
-        justify-items: left;
-        align-items: center;
+        grid-column: 10 / -1;
+    
     }
-    .header .user .header-icon{
-      max-width: 8%;
-    }
-    .header .user #usuario{
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
    
     .side .side-contenedor{
         display: grid;
@@ -376,6 +368,3 @@ body{
          opacity: 0;
         }
       }
-
-   
-  
