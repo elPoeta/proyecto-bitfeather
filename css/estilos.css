@@ -44,7 +44,7 @@ body{
     }
 
     .header .logo-h1{
-        font-weight: 800;
+        font-weight: 900;
         font-size: 2.5rem;
     }
     .header .logo-h1 a{
@@ -68,7 +68,7 @@ body{
     .header .nav-bar ul li{
         display: inline-grid;
         align-items: center;
-        padding: 20px; 
+        padding: 15px; 
     }
     .header .nav-bar a{
         font-size: 1.3rem;
@@ -132,11 +132,11 @@ body{
           .side-menu-cuenta{
         grid-column: 2 / 5;
         border: 5px solid #022037;
-        border-radius : 25px;
+        border-radius :  0 50% / 0 100%;
         background: #FF9200;
         text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 1.1rem;
+        font-weight: 900;
         text-transform: uppercase;
         align-items: center;
     }
@@ -148,14 +148,14 @@ body{
         align-self: center;
         width: 50%;
         height: auto;
-        transform: scale(0.95);
+        transform: scale(1);
         transition:transform 0.5s;
     }
     .side .side-menu-item .side-icon{
         max-width: 100%;;
     }
     .side .side-menu-item:hover {
-        transform: scale(1.1);
+        transform: scale(0.95);
       
     }
 
@@ -197,7 +197,7 @@ body{
 }
 .article-post {
     box-sizing : border-box;
-    max-width: 50%;
+    max-width: 60%;
     align-items : center;  
     background : #FFE0AA;
     color : #022037;
@@ -337,7 +337,7 @@ body{
         .side-menu-post,
         .side-menu-cuenta{
             border: 3px solid #022037;
-            border-radius : 50px;
+            border-radius : 0 50% / 0 100%;
   }
 
   .side .side-menu-item {
