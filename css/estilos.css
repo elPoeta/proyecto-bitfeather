@@ -126,6 +126,7 @@ body{
     grid-template-columns: repeat(5,1fr);
     grid-gap: 20px;
     padding: 30px;
+   
 }
           .side-menu-crear,
           .side-menu-post,
@@ -139,8 +140,15 @@ body{
         font-weight: 900;
         text-transform: uppercase;
         align-items: center;
+         transform: scale(1);
+        transition: box-shadow 0.5s, transform 0.5s; 
     }
-
+ .side-menu-crear:hover, 
+ .side-menu-post:hover,
+ .side-menu-cuenta:hover{
+    transform: scale(1.15);
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.7);
+}
     .side .side-menu-item {
         margin-top: 25px;
         color: #022037;
@@ -148,16 +156,16 @@ body{
         align-self: center;
         width: 50%;
         height: auto;
-        transform: scale(1);
-        transition:transform 0.5s;
+        /* transform: scale(1);
+        transition:transform 0.5s; */
     }
     .side .side-menu-item .side-icon{
         max-width: 100%;;
     }
-    .side .side-menu-item:hover {
+    /* .side .side-menu-item:hover {
         transform: scale(0.95);
       
-    }
+    } */
 
 .footer{
     grid-area: ff;
@@ -226,8 +234,30 @@ body{
         box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.6);
      }
 
+.menu-flotante{
+    z-index: 100;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+#nav-icon-hamburger{
+    background: #022037;
+    border: #022037;
+    border-radius: 100%;
+    font-size: 45px;
+    line-height: 40px;
+    padding: 12px;
+    color: #B71;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
 
-
+#nav-icon-hamburger:hover{
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(0.85);
+     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+}
      .ck-editor__editable {
       min-height: 400px;   
       max-height: 700px;
