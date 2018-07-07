@@ -243,7 +243,7 @@ body{
 #nav-icon-hamburger{
     background: #022037;
     border: #022037;
-    border-radius: 100%;
+    border-radius: 50%;
     font-size: 45px;
     line-height: 40px;
     padding: 12px;
@@ -256,8 +256,89 @@ body{
     cursor: pointer;
     opacity: .9;
     transform: scale(0.85);
-     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.5);
 }
+
+
+.nav-panel {
+    border-radius:  0 50% / 0 100%;
+    height:auto;
+    width:0;
+    position:fixed;
+    z-index:100;
+    top:25%;
+    left:0px;
+    background-color:#FF9200;
+    opacity:.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:0.5s;
+  }
+  
+  .nav-panel  a{
+    padding:10px 10px 10px 25px;
+    font-size:1.3rem;
+    font-weight: 900;
+    color:#fff;
+    display:block;
+    transition:0.3s;
+  }
+  
+  .nav-panel a:hover{
+    color:#022037;
+  }
+
+
+
+  .nav-panel .btn-cerrar{
+    position:absolute;
+    top:0;
+    right:250px;
+    font-size:36px;
+    
+  }
+  
+  #panel-menu{
+    margin-left:120px;
+    list-style: none;
+  } 
+ 
+/* .nav-panel{
+    border: 0;
+    border-radius:  0 100% / 0 50%;
+    width: 0px;
+    height: auto;
+    margin: 0 auto;
+    background: #FF9200;
+    position: fixed;
+    top: 25%;
+    overflow-x:hidden;
+    z-index: 120;
+}
+.nav-panel  a{
+    padding:10px 10px 10px 25px;
+    font-size:1.3rem;
+    font-weight: 900;
+    color:#fff;
+    display:block;
+    transition:0.3s;
+  }
+  .nav-panel a:hover{
+    color:#022037;
+  }
+
+ .nav-panel .btn-cerrar{
+    position: absolute;
+    top:0;
+    right:20px;
+    font-size:36px;
+    margin-left:10px;
+  }
+  #panel-menu{
+    margin-left:120px;
+    list-style: none;
+  } */
+  
      .ck-editor__editable {
       min-height: 400px;   
       max-height: 700px;
