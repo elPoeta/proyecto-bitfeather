@@ -233,8 +233,47 @@ body{
         transform: scale(0.90);
         box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.6);
      }
+ 
+.menu-horizontal-categorias{
+    width: 90%;
+    left: 5%;
+    height: auto;
+    position: fixed;
+    z-index:100;
+    top:70px;
+    background-color:#022037;
+    border-radius: 35px;
+    opacity: .9;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.5s linear;
+}
+.menu-horizontal{
+    list-style: none;
+    padding: 10px;
+}
+.menu-horizontal li{
+    display: inline-block;
 
-.menu-flotante{
+}
+.menu-horizontal  a{
+    padding:10px 10px 10px 25px;
+    font-size:1.3rem;
+    font-weight: 900;
+    color:#FFE0AA;
+    text-align: center;
+
+  }
+  .menu-horizontal a:hover{
+      color: #FF9200;      
+  }
+  .hide-menu{
+      display: none;
+  }
+  .nav-panel a:hover{
+    color:#022037;
+  }
+.boton-flotante{
     z-index: 100;
     position: fixed;
     bottom: 15px;
@@ -307,9 +346,7 @@ body{
   .submenu a{
     color: #FFE0AA;
 }
-.hide-submenu{
-    display: none;
-}
+
      .ck-editor__editable {
       min-height: 400px;   
       max-height: 700px;

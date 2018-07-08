@@ -27,16 +27,9 @@
 
             <nav class="nav-bar">
                 <ul>
-                    <li>
-                        <a href="#">Posts</a>
-                    </li>
-                    <li> 
-                            <a href="#">Más Vistos</a>
-                        
-                    </li>
-                    <li>
-                            <a href="#">Categorias</a>
-                    </li>
+                    <li><a href="#">Posts</a></li>
+                    <li><a href="#">Más Vistos</a></li>
+                    <li><a href="#" id="selecion-categoria-navbar">Categorias</a></li>
                 </ul>
             </nav>
 
@@ -140,24 +133,32 @@
                     </div>
                   
         <footer class="footer">FOOTER</footer>
-
-                 
-    <div class="menu-flotante">
+     
+        <div class="menu-horizontal-padre">
+        <div class="menu-horizontal-categorias hide-menu"  id="menu-horizontal-cat">
+            <ul class="menu-horizontal">
+                <li><a href="#">Todas</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">css3</a></li>
+                <li><a href="#">Spring boot</a></li>
+                <li><a href="#">html</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">Linux</a></li>
+            </ul>
+      </div>
+    </div>          
+    
+    <div class="boton-flotante">
         <button id="nav-icon-hamburger">&#9776;</button>
 </div>
     <div class="nav-panel">
         <a href="#" class="btn-cerrar" id="btn-nav-panel">&times;</a>
         <ul class="panel-menu">
-            <li>
-                <a href="#">Posts</a>
-            </li>
-            <li> 
-                    <a href="#">Más Vistos</a>
-                
-            </li>
+            <li><a href="#">Posts</a></li>
+            <li> <a href="#">Más Vistos</a> </li>
             <li>
                     <a href="#" id="submenu-categorias">Categorias</a>
-                    <ul class="submenu hide-submenu" id="sub-menu-cat">
+                    <ul class="submenu hide-menu" id="sub-menu-cat">
                         <li><a href="#">Todas</a></li>
                         <li><a href="#">Java</a></li>
                         <li><a href="#">css3</a></li>
