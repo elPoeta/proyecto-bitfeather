@@ -42,7 +42,8 @@ desplegarMenuCategoriasSidePanel.addEventListener('click', (e) =>{
 });
 
 crearPost.addEventListener('click', (e) =>{
-   Vista.mostrarCrearPost();
+   let crearPost = new CrearPost();
+    crearPost.mostrarCrearPost();
 });
 
 
