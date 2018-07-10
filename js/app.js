@@ -6,6 +6,9 @@ const navPanel = document.querySelector('.nav-panel');
 const crearPost = document.querySelector('#crear-post');
 const desplegarMenuCategoriasSidePanel = document.querySelector('#submenu-categorias');
 const subMenuCate = document.querySelector('#sub-menu-cat');
+let displayPosts = new DisplayPost();
+
+displayPosts.mostrarTodos();
 
 seleccionCategoriaNavbar.addEventListener('click', (e)=>{
     e.preventDefault();

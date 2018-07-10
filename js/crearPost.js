@@ -1,35 +1,38 @@
 class CrearPost{
+   constructor(){
+    this.quill;
+   }
+
      mostrarCrearPost(){
       const  template = `
         <section class="main-crear-post">
         <h2 class="titulo-main">Crear Post</h2>
         <form>
-        <input type="text" id="crear-titulo" placeholder="Titulo">
-        <input type="text" id="crear-subtitulo" placeholder="Subtitulo">
+        <input type="text" id="crear-titulo" name="crear-titulo" placeholder="Titulo">
+        <input type="text" id="crear-subtitulo" name="crear-subtitulo" placeholder="Subtitulo">
         <select>
             <option>Selecionar Categoria</option>
-            <option value="cat1">Categoria 1</option>
-            <option value="cat2">Categoria 2</option>
-            <option value="cat3">Categoria 3</option>
-            <option value="cat4">Categoria 4</option>
+            <option value="CSS">CSS 3</option>
+            <option value="HTML5">HTML 5</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Java">Java</option>
           </select>
-      <label for="cuerpo">Cuerpo</label>
-      <input name="cuerpo" type="hidden">
+      <label for="cuerpo"><h3>Cuerpo:</h3></label>
+      <input name="cuerpo" id="crear-cuerpo" type="hidden">
       <div id="editor"></div>
         <h3>Tags:</h3>
-        <textarea name="tag" rows="5"></textarea>
+        <textarea id="-crear-tag" name="tag" rows="5"></textarea>
         <button id="btn-publicar-post">Publicar</button>
         </form>
         </section>`;
         document.querySelector('#panel-contenido').innerHTML = template;
-        
         this.renderEditor();
     }
 
     renderEditor(){
         const toolbarOptions = [
-            ['bold', 'italic', 'underline', 'strike'],        
-            ['blockquote', 'code-block', 'image', 'video'],
+            ['bold', 'italic', 'underline'],        
+            ['blockquote', 'code-block','link', 'image', 'video'],
           
             [{ 'header': 1 }, { 'header': 2 }],               
             [{ 'list': 'ordered'}, { 'list': 'bullet' }],
@@ -42,28 +45,64 @@ class CrearPost{
           
             [{ 'color': [] }, { 'background': [] }],        
             [{ 'font': [] }],
-            [{ 'align': [] }],
+            [{ 'align': [] }]
           
-            ['clean']                                       
+            //['clean']                                       
           ];
 
-          let quill = new Quill('#editor', {
+         this.quill = new Quill('#editor', {
             modules: {  
               toolbar: toolbarOptions,
               imageResize: {}
             },
+            placeholder: 'Construye aquí tu epopeya...',
             theme: 'snow'
           });
           const botonPublicarPost = document.querySelector('#btn-publicar-post');
           botonPublicarPost.addEventListener('click', (e)=>{
-            e.preventDefault();
-          let cuerpo = document.querySelector('input[name=cuerpo]');
-          cuerpo.value = JSON.stringify(quill.getContents());
-          console.log(cuerpo.value);
+            //e.preventDefault();
+            this.publicarPost();
+      });
+    }
 
-          let textoajason = JSON.parse(cuerpo.value);
-          console.log('textoajson<',textoajason);
-       
-        });
+    publicarPost(){
+        let titulo = document.querySelector('#crear-titulo');
+        let subTitulo = document.querySelector('#crear-subtitulo');
+        let cuerpo = document.querySelector('#crear-cuerpo');
+        
+        cuerpo.value = JSON.stringify(this.quill.getContents());
+        console.log('Cuerpo >', cuerpo.value);
+        let textoajson = JSON.parse(cuerpo.value);
+        console.log('textoajson>',textoajson);
+   
+        let posteos = {};
+        
+        posteos.titulo = titulo.value;
+        posteos.subTitulo = subTitulo.value;
+        posteos.cuerpo = this.quill.getContents();
+        
+        console.log("titulo >> ",posteos.titulo);
+        console.log("posteos ",posteos.cuerpo);
+        
+        
+        let postsInit =  localStorage.getItem("post");
+        
+        if ( postsInit === null ){
+          postsInit = "[]";
+        }
+        
+        let listaPosts = JSON.parse( postsInit ); 
+      
+        posteos.id = listaPosts.length;
+        posteos.titulo = titulo.value;
+        posteos.subTitulo = subTitulo.value;
+        posteos.cuerpo = this.quill.getContents();
+
+        console.log('ID>> ',posteos.id);
+        console.log("titulo >> ",posteos.titulo);
+        console.log("posteos ",posteos.cuerpo);
+        
+        listaPosts.push( posteos );  
+        localStorage.setItem( "post", JSON.stringify( listaPosts ));    
     }
 }
