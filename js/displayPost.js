@@ -1,7 +1,6 @@
 class DisplayPost{
     
     constructor(){
-        this.quill;
         this.listaPostsJson = JSON.parse( localStorage.getItem("post"));
        }
 
@@ -11,7 +10,7 @@ class DisplayPost{
         <h2 class="titulo-main">Posts</h2>
          ${this.listaPostsJson.map(post =>
             `<article class="article-post">
-                  <h2 class="titulo-post"><a href="#" id="${post.id}">${post.titulo}</a></h2>
+                  <h2 class="titulo-post" id="post-${post.id}"><a href="#">${post.titulo}</a></h2>
                   <p>${post.subTitulo}</p>
                <ul>
                   <li><a href="#">categoria</a></li>
@@ -25,43 +24,38 @@ class DisplayPost{
           <article class="article-post">
                   <h2 class="titulo-post"><a href="#">Oops!! No hay posts disponibles</a></h2>
                   <p>Se el primero en postear</p>
-          </article>`  ;
-          console.log(this.listaPostsJson);
+          </article>`;
+
           document.querySelector('#panel-contenido').innerHTML = template;
+        
+          if(this.listaPostsJson !== null ){
+            let tituloPost = document.querySelectorAll('.titulo-post');
+            for (let i = 0; i < tituloPost.length; i++) {
+
+              tituloPost[i].addEventListener('click', ()=> {
+                let id = tituloPost[i].getAttribute('id');
+                id =id.replace(/\D/g,'');
+                this.mostrarBlog(id);
+              });
+          
+            }
+          }
+    }
+
+    mostrarBlog(id){
+        let options = {
+            readOnly: true
+          };
+
+          let template = 
+          `<section class="blog-post">
+          <h2 class="titulo-main">${this.listaPostsJson[id].titulo}</h2>
+          <p>${this.listaPostsJson[id].subTitulo}</p>
+          <hr>
+          <div id="blog"></div>
+          </section>`;  
+          document.querySelector('#panel-contenido').innerHTML = template;
+          let blog = new Quill('#blog', options);
+          blog.setContents(this.listaPostsJson[id].cuerpo);
     }
 }
-
-
-       
-     /*   let listaPostsJson = JSON.parse( localStorage.getItem("post"));
-       console.log('index >> ',listaIndexJson);
-        let texto = 
-        `<h2>${listaPostsJson[listaIndex[0].id].titulo}</h2>
-        <div id="blog"></div>`; 
-       
-     
-     
-     document.querySelector( '#contenedor-blog' ).innerHTML = texto;
-     let blog = new Quill('#blog', options);
-       blog.setContents(listaPostsJson[listaIndex[0].id].cuerpo); 
-       
-       
-       
-        viewProductos(id, idPanel){
-        let productos = this.datos;
-        let template =  `<section class="contenedor-productos text-center">
-                         ${productos.map(producto =>
-           `<div class="card">
-              <img src="${producto.imagen}" class="img-card">
-          
-            <h2 class="titulo-card">${producto.nombre}</h2>
-            <h3 class="precio-card">$ ${producto.precio}</h3>
-            <hr>
-            <button id="btn-agregar" onclick=agregarProdutoACarrito(${producto.id});><i class="fas fa-cart-plus"> </i>Agregar</button>
-            </div>`).join('')}</section>`;    
-            document.querySelector(idPanel).innerHTML = template;
-        
-    }
-       
-       
-       */ 

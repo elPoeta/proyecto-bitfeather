@@ -244,6 +244,18 @@ body{
         box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.6);
      }
  
+     .blog-post{
+        box-sizing : border-box;
+        max-width: 100%;
+        align-items : center;  
+        background : #FFF;
+        color : #022037;
+        border : 1px solid #333;
+        margin : 0px auto;
+        padding : 10px;
+        border-radius : 25px;
+    }
+
 .menu-horizontal-categorias{
     width: 90%;
     left: 5%;

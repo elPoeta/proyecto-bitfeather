@@ -68,22 +68,18 @@ class CrearPost{
     publicarPost(){
         let titulo = document.querySelector('#crear-titulo');
         let subTitulo = document.querySelector('#crear-subtitulo');
-        let cuerpo = document.querySelector('#crear-cuerpo');
+        //let cuerpo = document.querySelector('#crear-cuerpo');
         
-        cuerpo.value = JSON.stringify(this.quill.getContents());
-        console.log('Cuerpo >', cuerpo.value);
-        let textoajson = JSON.parse(cuerpo.value);
-        console.log('textoajson>',textoajson);
+        //cuerpo.value = JSON.stringify(this.quill.getContents());
+        //console.log('Cuerpo >', cuerpo.value);
+        //let textoajson = JSON.parse(cuerpo.value);
+        //console.log('textoajson>',textoajson);
    
         let posteos = {};
         
         posteos.titulo = titulo.value;
         posteos.subTitulo = subTitulo.value;
         posteos.cuerpo = this.quill.getContents();
-        
-        console.log("titulo >> ",posteos.titulo);
-        console.log("posteos ",posteos.cuerpo);
-        
         
         let postsInit =  localStorage.getItem("post");
         
