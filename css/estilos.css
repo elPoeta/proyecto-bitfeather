@@ -182,7 +182,7 @@ body{
 
 .main-crear-post{
     box-sizing : border-box;
-    max-width: 80%;
+    max-width: 100%;
     align-items : center;  
     background : #FFE0AA;
     color : #022037;
@@ -249,7 +249,7 @@ body{
         max-width: 100%;
         align-items : center;  
         background : #FFF;
-        color : #022037;
+        color : #000;
         border : 1px solid #333;
         margin : 0px auto;
         padding : 10px;
