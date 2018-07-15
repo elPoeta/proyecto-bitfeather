@@ -44,7 +44,8 @@ class DisplayPost{
 
     mostrarBlog(id){
         let options = {
-            readOnly: true
+            readOnly: true,
+            scrollingContainer: '#scrolling-container'
           };
 
           let template = 
@@ -52,7 +53,9 @@ class DisplayPost{
           <h2 class="titulo-main">${this.listaPostsJson[id].titulo}</h2>
           <p>${this.listaPostsJson[id].subTitulo}</p>
           <hr>
+          <div id="scrolling-container">
           <div id="blog"></div>
+          </div>
           </section>`;  
           document.querySelector('#panel-contenido').innerHTML = template;
           let blog = new Quill('#blog', options);
