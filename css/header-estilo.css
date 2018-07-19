@@ -1,0 +1,130 @@
+.header{
+    display: grid;
+    grid-area: hh;
+    background: #FF9200;
+    grid-template-columns: repeat(6, 2fr);
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top : 0px;
+    z-index: 100;
+}
+
+.titulo{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.logo-header{
+    max-height: 70px;
+    padding-left: 10px;
+}
+
+.titulo h1{
+    text-transform: lowercase;
+    font-size: 3rem;
+    text-align: left;
+    font-weight: 900;
+    margin: auto;
+}
+
+.titulo h1 a{
+    color: #022037;
+}
+
+.titulo h1 a:hover{
+        color:#FFE0AA;
+}
+
+.blink{
+    animation: blinker 1s linear infinite;
+}
+
+.nav-bar{
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav-bar ul{
+    list-style: none;
+}
+
+.nav-bar ul li{
+    display: inline-grid;
+    align-items: center;
+    padding: 15px; 
+}
+
+.nav-bar ul li a{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #022037;
+}
+
+.nav-bar ul li a:hover{
+    color: #FFE0AA;
+    border-bottom: 1px solid #FFE0AA;
+}
+
+.busqueda{
+    grid-column: 5 / 6;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+.logo-lupa{
+    max-height: 40px;
+}
+#buscar{
+    font-size: 1.2rem;
+    height: auto;
+    width: 100%;
+    padding: 4%;
+    border: 3px solid #022037;
+    border-radius: 15px;
+    color: #022037;
+    background: rgba(255, 146, 0, .6);
+}
+
+.usuario{
+    grid-column: 6 / -1;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.login-user{
+    text-align: right;
+    align-self: center;
+    padding-right: 5px;
+    font-size: 1.3rem;
+    color: #022037;
+    font-weight: 800;
+}
+.marco-logo-user{
+    width: 65px;
+    height: 65px;
+    box-sizing: border-box;
+    border: 3px solid #022037;
+    border-radius: 50%;
+    
+}
+.logo-user{
+    max-height: 40px;
+    padding: 10%;
+}
+@keyframes blinker {
+    50% {
+          opacity: 0;
+         }
+       }

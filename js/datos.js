@@ -1,0 +1,34 @@
+const categorias = [
+    {
+        "id":1,
+        "nombre":"Literatura"
+    },
+    {
+        "id":2,
+        "nombre":"Música"
+    },
+    {
+        "id":3,
+        "nombre":"Cine"
+    },
+    {
+        "id":4,
+        "nombre":"Deportes"
+    },
+    {
+        "id":5,
+        "nombre":"Tecnología"
+    },
+    {
+        "id":6,
+        "nombre":"Developers"
+    },
+    {
+        "id":7,
+        "nombre":"Noticias"
+    },
+    {
+        "id":8,
+        "nombre":"Tutoriales"
+    }
+];

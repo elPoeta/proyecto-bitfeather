@@ -15,7 +15,7 @@ class DisplayPost{
                <ul>
                   <li><a href="#">categoria</a></li>
                   <li><a href="#">autor</a></li>
-                  <li>fecha</li>
+                  <li>Fecha</li>
               </ul> 
           </article>`).join('')}`
         
@@ -26,7 +26,7 @@ class DisplayPost{
                   <p>Se el primero en postear</p>
           </article>`;
 
-          document.querySelector('#panel-contenido').innerHTML = template;
+          document.querySelector('#panel-main').innerHTML = template;
         
           if(this.listaPostsJson !== null ){
             let tituloPost = document.querySelectorAll('.titulo-post');
@@ -51,13 +51,13 @@ class DisplayPost{
           let template = 
           `<section class="blog-post">
           <h2 class="titulo-main">${this.listaPostsJson[id].titulo}</h2>
-          <p>${this.listaPostsJson[id].subTitulo}</p>
+          <p class="subtitulo-blogPost">${this.listaPostsJson[id].subTitulo}</p>
           <hr>
           <div id="scrolling-container">
           <div id="blog"></div>
           </div>
           </section>`;  
-          document.querySelector('#panel-contenido').innerHTML = template;
+          document.querySelector('#panel-main').innerHTML = template;
           let blog = new Quill('#blog', options);
           blog.setContents(this.listaPostsJson[id].cuerpo);
     }

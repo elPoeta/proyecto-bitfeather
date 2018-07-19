@@ -25,7 +25,7 @@ class CrearPost{
         <button id="btn-publicar-post">Publicar</button>
         </form>
         </section>`;
-        document.querySelector('#panel-contenido').innerHTML = template;
+        document.querySelector('#panel-main').innerHTML = template;
         this.renderEditor();
     }
 
@@ -90,3 +90,6 @@ class CrearPost{
         localStorage.setItem( "post", JSON.stringify( listaPosts ));    
     }
 }
+
+
+

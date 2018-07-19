@@ -1,119 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/quill.snow.css">         
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quill.snow.css">
+    <link rel="stylesheet" href="css/contenedor-estilo.css">
+    <link rel="stylesheet" href="css/header-estilo.css">
+    <link rel="stylesheet" href="css/navegacion-estilo.css">
+    <link rel="stylesheet" href="css/mainSection-estilo.css">
+    <link rel="stylesheet" href="css/menuLateral-estilo.css">
+    <link rel="stylesheet" href="css/footer-estilo.css">
+    
     <script src="js/quill.min.js" defer></script>
     <script src="js/image-resize.min.js" defer></script>
-    <script src="js/displayPost.js" defer></script>
+    <script src="js/datos.js" defer></script>
+    <script src="js/menu.js" defer></script>
     <script src="js/crearPost.js" defer></script>
-    <script src="js/app.js" defer></script>
-    <title>bitfeather blog</title>
+    <script src="js/displayPost.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <title>bitfther\>_</title>
 </head>
-
 <body>
-    <div class="grid">
-        <header class="header">
-            
-            <h1 class="logo-h1">
-                <a href="index.html">
-                    <img src="img/logo.svg" alt="bitfeather-logo" id="logo">
-                    <span class="hide-text">bitfeather\><span class="blink hide-text">_</span></span></a>
-            </h1>
-
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="#">Posts</a></li>
-                    <li><a href="#">Más Vistos</a></li>
-                    <li><a href="#" id="selecion-categoria-navbar">Categorias</a></li>
-                </ul>
-            </nav>
-
-            <div class="buscar">
-                <input type="text" id="buscador" placeholder="Buscar..." />
-                <img src="img/lupa2.svg" alt="lupa-svg" class="header-icon">
-            </div>
-            <div class="user">
-                    <a href="#">
-                            <img src="img/user.svg" alt="user-svg" class="header-icon">
-                    </a> 
-                    <a href="#" id="usuario">@elPoeta</a>
-            </div>
-            
-        </header>
-        <div class="contenido" id="panel-contenido">
-
+    <div class="contenedor">
+        <div class="header">
+                <header class="titulo">
+                    <figure>
+                        <a href="index.html"><img src="img/logo.svg" alt="bitfeather" class="logo-header"></a>
+                    </figure>
+                    <h1><a href="index.html">bitfeather\><span class="blink">_</span></a></h1>
+                </header>
+                <nav class="nav-bar">
+                        <ul>
+                            <li><a href="#">Posts</a></li>
+                            <li><a href="#">Más Vistos</a></li>
+                            <li><a href="#" id="selecion-categoria-navbar">Categorias</a></li>
+                        </ul>
+                </nav>
+                <div class="busqueda">
+                    <figure>
+                        <img src="img/lupa.svg" alt="lupa" class="logo-lupa">
+                    </figure>
+                    <form action="" method="get">
+                            <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+                    </form>
+                </div>
+                <div class="usuario">
+                        <a href="#" class="login-user">Login</a>
+                    <figure>
+                        <div class="marco-logo-user">
+                                <img src="img/user.svg" alt="user-logo" class="logo-user">
+                        </div>
+                    </figure>
+                </div>
         </div>
-
-
-        <div class="side">
-          <div class="side-contenedor">  
-            <div class="side-menu-crear">
-                <a href="#" id="crear-post" class="side-menu-item">
-                       <img src="img/escritor.svg" alt="escritor-svg" class="side-icon">
-                    <span>Crear Post</span></a>
-            </div>
-                <div class="side-menu-post">
-                        <a href="#" id="mis-posts" class="side-menu-item">
-                            <img src="img/misposts.svg" alt="misposts-svg" class="side-icon">
-                            <span>Mis Posts</span></a>
-                    </div>
-                    <div class="side-menu-cuenta">
-                        <a href="#" id="micuenta" class="side-menu-item">
-                            <img src="img/engranaje.svg" alt="engranaje-svg" class="side-icon">
-                                       <span>Mi Cuenta</span></a>
+        
+        <section class="main-section">
+            <div id="panel-main"></div>
+        </section>
+        
+        <aside class="side-menu">
+                <div class="side-contenedor">  
+                        <div class="side-menu-crear">
+                            <a href="#" id="crear-post" class="side-menu-item">
+                                <figure>
+                                        <img src="img/crearPost.svg" alt="crearPost" class="side-icon">
+                                </figure>
+                                   
+                                <span>Crear Post</span></a>
+                       </div>
+                        <div class="side-menu-post">
+                            <a href="#" id="mis-posts" class="side-menu-item">
+                                 <figure>
+                                    <img src="img/misPosts.svg" alt="misposts" class="side-icon">
+                                </figure>
+                 
+                                <span>Mis Posts</span></a>
                          </div>
-                        </div>     
-                    </div>
-                  
-        <footer class="footer">FOOTER</footer>
-     
-        <div class="menu-horizontal-padre">
-        <div class="menu-horizontal-categorias hide-menu"  id="menu-horizontal-cat">
-            <ul class="menu-horizontal">
-                <li><a href="#">Todas</a></li>
-                <li><a href="#">Java</a></li>
-                <li><a href="#">css3</a></li>
-                <li><a href="#">Spring boot</a></li>
-                <li><a href="#">html</a></li>
-                <li><a href="#">Javascript</a></li>
-                <li><a href="#">Linux</a></li>
-            </ul>
-      </div>
-    </div>          
+                        <div class="side-menu-cuenta">
+                            <a href="#" id="micuenta" class="side-menu-item">
+                             <figure>
+                                    <img src="img/settings.svg" alt="micuenta" class="side-icon">
+                             </figure>   
+                             <span>Mi Cuenta</span></a>
+                        </div>
+                 </div>     
+        </aside>
+       
+        <footer class="footer">
+            <div>
+                <p class="autor"><a href="https://ar.linkedin.com/in/leonardo-tosetto" target="_blank"><img src="img/linkedin.svg">Leonardo Tosetto</a> | <a href="https://github.com/elPoeta" target="_blank"><img src="img/gitHub.svg">@elPoeta</a></p>   
+                </div>
+                <div >
+                    <p class="copy"><span>&copy;</span> 2018</p>
+                </div>
+        </footer>
     
-    <div class="boton-flotante">
-        <button id="nav-icon-hamburger">&#9776;</button>
-</div>
-    <div class="nav-panel">
+
+      <div class="menu-horizontal-padre">
+        <div class="menu-horizontal-categorias hide-menu"  id="menu-horizontal-cat">
+            <ul class="menu-horizontal" id="panel-menuHorizontal">
+              
+             </ul>
+         </div>
+    </div>  
+ 
+        <div class="boton-flotante">
+            <button id="nav-icon-hamburger">&#9776;</button>
+        </div>
+      
+             <div class="nav-panel">
         <a href="#" class="btn-cerrar" id="btn-nav-panel">&times;</a>
         <ul class="panel-menu">
             <li><a href="#">Posts</a></li>
             <li> <a href="#">Más Vistos</a> </li>
             <li>
                     <a href="#" id="submenu-categorias">Categorias</a>
-                    <ul class="submenu hide-menu" id="sub-menu-cat">
-                        <li><a href="#">Todas</a></li>
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">css3</a></li>
-                        <li><a href="#">Spring boot</a></li>
-                        <li><a href="#">html</a></li>
-                        <li><a href="#">Javascript</a></li>
-                        <li><a href="#">Linux</a></li>
+                    <ul class="submenu hide-menu" id="panel-sideMenu">
+                  
                     </ul>
             </li>
-        </ul>
-</div>
+           </ul>
+        </div>
+        
+        
 
     </div>
-
 </body>
-
 </html>
