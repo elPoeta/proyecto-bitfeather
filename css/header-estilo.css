@@ -44,9 +44,9 @@
 }
 
 .nav-bar{
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 3fr;
     justify-content: center;
     align-content: center;
 }
@@ -97,7 +97,7 @@
 .usuario{
     grid-column: 6 / -1;
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 100px 1fr;
     justify-content: center;
     align-content: center;
     margin: auto;
@@ -123,6 +123,7 @@
     max-height: 40px;
     padding: 10%;
 }
+
 @keyframes blinker {
     50% {
           opacity: 0;
