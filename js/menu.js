@@ -1,6 +1,6 @@
 class Menu{
    static mostrarMenu(idPanel){
-        let template = ` <li><a href="#" id="cat-0">Todas</a></li>
+        let template = `<li><a href="#" id="cat-0">Todas</a></li> 
             ${categorias.map(categoria => 
                 `<li><a href="#" id="cat-${categoria.id}">${categoria.nombre}</a></li>`).join('')}`;
                 document.querySelector(idPanel).innerHTML = template;        

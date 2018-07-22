@@ -18,9 +18,27 @@ body{
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 80px auto 100px;
+    grid-template-rows: 100px auto 100px;
     grid-template-areas:
         "hh hh hh hh hh hh hh hh"
         "mc mc mc mc mc mc sm sm"
         "ff ff ff ff ff ff ff ff";
+}
+
+@media (max-width : 1300px){
+    .contenedor{
+       grid-template-rows: 90px auto 100px;
+    }
+}
+
+@media (max-width : 650px){
+.contenedor{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px 100px auto 60px;
+    grid-template-areas:
+        "hh hh hh"
+        "sm sm sm"
+        "mc mc mc"
+        "ff ff ff";
+}
 }
