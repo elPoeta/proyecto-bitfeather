@@ -12,10 +12,9 @@ class CrearPost{
         <input type="text" id="crear-subtitulo" name="crear-subtitulo" placeholder="Subtitulo">
         <select>
             <option>Selecionar Categoria</option>
-            <option value="CSS">CSS 3</option>
-            <option value="HTML5">HTML 5</option>
-            <option value="JavaScript">JavaScript</option>
-            <option value="Java">Java</option>
+            ${categorias.map(categoria =>
+              `<option value="${categoria.id}">${categoria.nombre}</option>`
+            ).join('')}
           </select>
       <label for="cuerpo"><h3>Cuerpo:</h3></label>
       <input name="cuerpo" id="crear-cuerpo" type="hidden">
