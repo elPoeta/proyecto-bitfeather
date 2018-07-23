@@ -11,7 +11,7 @@ class CrearPost{
         <input type="text" id="crear-titulo" name="crear-titulo" placeholder="Titulo">
         <input type="text" id="crear-subtitulo" name="crear-subtitulo" placeholder="Subtitulo">
         <select>
-            <option>Selecionar Categoria</option>
+            <option selected disabled>Selecionar Categoria</option>
             ${categorias.map(categoria =>
               `<option value="${categoria.id}">${categoria.nombre}</option>`
             ).join('')}
