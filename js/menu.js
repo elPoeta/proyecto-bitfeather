@@ -22,10 +22,12 @@ seleccionCategoriaNavbar.addEventListener('click', (e)=>{
     e.preventDefault();
     if(menuHorizontalCat.classList.contains('hide-menu')){
         menuHorizontalCat.classList.remove('hide-menu');
+        document.querySelectorAll(".rotar")[0].style.transform = "rotate(180deg)";
         Menu.mostrarMenu("#panel-menuHorizontal");
     }
     else{
         menuHorizontalCat.classList.add('hide-menu');
+        document.querySelectorAll(".rotar")[0].style.transform = "rotate(0deg)";
     }
 });
 
@@ -47,9 +49,11 @@ desplegarMenuCategoriasSidePanel.addEventListener('click', (e) =>{
     e.preventDefault();
     if(subMenuCate.classList.contains('hide-menu')){
         subMenuCate.classList.remove('hide-menu');
+        document.querySelectorAll(".rotar")[1].style.transform = "rotate(180deg)";
         Menu.mostrarMenu("#panel-sideMenu");
     }
     else{
         subMenuCate.classList.add('hide-menu');
+        document.querySelectorAll(".rotar")[1].style.transform = "rotate(0deg)";
     }
 });

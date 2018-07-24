@@ -31,6 +31,9 @@
   .menu-horizontal a:hover{
       color: #FF9200;      
   }
+  .rotar{
+      display: inline-grid;
+  }
   .hide-menu{
       display: none;
   }
