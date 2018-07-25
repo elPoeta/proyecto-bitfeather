@@ -22,14 +22,51 @@
     padding : 10px;
     border-radius : 25px;
 }
+.contenedorFieldsetCrearPost{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#form-crearPost label h3{
+    margin: 3px;
+    padding: 5px;
+}
+#form-crearPost input, #form-crearPost select, label{
+    padding: 5px;
+    font-size: .9rem;  
+}
+
+
+.fieldsetCrearPost{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #022037;
+
+}
+
+.fieldsetCrearPost legend{
+    color: #FF9200;
+    background: #022037;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+    width: 10em;
+    border: 2px solid #FF9200;
+    border-radius: 5px;
+}
 #btn-publicar-post{
+    display: block;
+    margin: 10px 5px 5px 0;
+    position: relative;
+    left: 80%;
     padding: 10px;
     font-size: 1.3rem;
     border: 0;
     border-radius: 90px;
     background: #00561D;
     color: #FFE0AA;
-    justify-self: right;
+    box-shadow: 3px 3px #888;
+    
 }
 #btn-publicar-post:hover{
     background: #297C45;
@@ -101,7 +138,7 @@
     }
     .subtitulo-blogPost{
         font-size: 1.2rem;
-        padding-left: 50px;
+        text-indent: 2rem;
     }
 
     @media (max-width : 1300px){
@@ -169,7 +206,17 @@
     .main-crear-post{
         max-width: 100%;
     }
-
+    .contenedorFieldsetCrearPost{
+        grid-template-columns:  1fr;
+    }
+    #form-crearPost input, #form-crearPost select, label{
+        font-size: .8rem;  
+    }
+    
+    .fieldsetCrearPost legend{
+        font-size: .7em;
+        width: 7em;
+    }
     .article-post {
         max-width: 90%;
       }
