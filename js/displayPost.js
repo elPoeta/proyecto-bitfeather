@@ -17,14 +17,16 @@ class DisplayPost{
                   <li><a href="#">autor</a></li>
                   <li>Fecha</li>
               </ul> 
-          </article>`).join('')}`
+          </article>`).join('')}
+          </section>`
         
         : `<section class="main-post">
         <h2 class="titulo-main">Posts</h2>
           <article class="article-post">
                   <h2 class="titulo-post"><a href="#">Oops!! No hay posts disponibles</a></h2>
                   <p>Se el primero en postear</p>
-          </article>`;
+          </article>
+          </section>`;
 
           document.querySelector('#panel-main').innerHTML = template;
         
