@@ -12,7 +12,7 @@
     top:0;
     height: 100%;
     width:100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: #00000080;
   }
   
@@ -29,17 +29,7 @@
     margin:0;
     text-align: center;
   }
-  .modal-header h2 label{
-    color: #fff;
-  }
- 
-  .modal-header h2 label{
-    color: #022037;
-  }
   
-  input[type="radio"]:checked, label.toogle {
-    background-color: #94c93d;
-  }
   .modal-header{
     background:rgba(255, 146, 0, .5);
     padding:15px;
@@ -51,7 +41,7 @@
     background-color: rgba(2, 32, 55, .7);
     height: 500px;
   }
-
+  
   
   #closeBtn{
     color:#ccc;
@@ -70,14 +60,13 @@
     from{ opacity: 0}
     to {opacity: 1}
   }
-
   /*=================================*/
 
 
   .wrapper {
     box-sizing: border-box;
     outline: none;
-    margin-top: 30px;
+    
   }
    
   .label-container {
