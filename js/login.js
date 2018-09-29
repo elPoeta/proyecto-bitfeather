@@ -20,8 +20,10 @@ function sw1() {
     frontbox.classList.add("moving");
     signupMsg.classList.toggle("visibility");
   
-    signup.classList.toggle('hide');
-    loginFront.classList.toggle('hide');
+   // signup.classList.toggle('hide');
+    signup.classList.toggle('visibility');
+    //loginFront.classList.toggle('hide');
+    loginFront.classList.toggle('visibility');
 }
 
 switch2.addEventListener('click', sw2);
@@ -31,8 +33,10 @@ function sw2() {
     frontbox.classList.remove("moving");
     signupMsg.classList.toggle("visibility");
   
-    signup.classList.toggle('hide');
-    loginFront.classList.toggle('hide');
+    //signup.classList.toggle('hide');
+    signup.classList.toggle('visibility');
+   // loginFront.classList.toggle('hide');
+    loginFront.classList.toggle('visibility');
   }
 //
 //setTimeout(function(){

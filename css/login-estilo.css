@@ -102,18 +102,24 @@ body{
   .frontbox{
     
     grid-column: 3/4;
-    grid-row: 2/5;
+    grid-row: 2 / -1;
     background-color: white;
     border-radius: 20px;
     z-index: 10;
-    transition: right .8s ease-in-out;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    
   }
-  
+  .login-front{
+    grid-column: 1 /-1;
+    grid-row: 2 / -1;
+  }
+  .signup{
+    grid-column: 1 /-1;
+    grid-row: 2 / -1;
+  }
   .moving{
-    right:45%;
-    grid-column: 2/3; 
+     grid-column: 2/3; 
    
   }
 
@@ -227,7 +233,10 @@ body{
    
     transition: opacity .8s ease-in-out;
   }
-  
+  .signup, .login-front{
+
+    transition: opacity .8s ease-out;
+  }
   .visibility{
     opacity: 0;
   }
