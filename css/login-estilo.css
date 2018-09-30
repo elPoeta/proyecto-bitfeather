@@ -238,6 +238,7 @@ body{
     margin-right: 3px;
     margin-left: 3px; 
     grid-template-rows:    50px 430px;
+    margin-bottom: 20px;
   }
   
   
@@ -253,11 +254,7 @@ body{
     
     grid-column: 3/-1;
     grid-row: 2 / -1;
-    background-color: white;
-    border-radius: 20px;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 1fr;
+   
     
   }
 
@@ -292,4 +289,3 @@ body{
           opacity: 0;
          }
        }
-
